@@ -1,0 +1,46 @@
+#advantages h1{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 45px;
+    font-family: 'Poppins', sans-serif;
+}
+#advantages h6{
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+    color: rgb(10, 10, 10);  
+}
+
+
+.card-container{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    margin-left: 50px;
+}
+.card-container img{
+    width: 100px;
+    margin-left: 35%;
+    margin-top: 10px;
+    border:1px solid  grey;
+    border-radius: 50%;
+    align-items: center;
+}
+.card-style{
+    margin: 10px;
+    width: 85%;
+    border-radius: 20px;
+}
+
+/* * Responsive style  */ 
+
+@media only screen and (max-width:688px) {
+    .products-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (min-width:689px) and (max-width:991px) {
+    .products-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

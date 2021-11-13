@@ -1,0 +1,13 @@
+.contact{
+    margin: 100px 5px 5px 200px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding:90px 20px 0px 20px;
+}
+
+.contact input{
+    margin: 10px 0px 10px 0px;
+    padding: 10px 30px 10px 30px;
+    width: 300px;
+    border-radius: 10px;
+}

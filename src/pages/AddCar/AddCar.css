@@ -1,0 +1,26 @@
+.add-car{
+    background-image: url('https://tinypng.com/images/social/website.jpg');
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.add-car h1{
+    padding-top: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(247, 80, 14);
+}
+
+
+
+.add-car form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+.add-car input, textarea{
+    width: 40%;
+    margin-bottom: 10px;
+}

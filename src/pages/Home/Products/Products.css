@@ -1,0 +1,33 @@
+.products-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    margin: 0 40px 0 40px;
+}
+
+.pds h1{
+    font-size: 40px;
+    font-weight: 600;
+    margin-top: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+.pds p{
+    margin-bottom: 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: lighter;
+    color: orangered;  
+
+}
+/* * Responsive style  */ 
+
+@media only screen and (max-width:688px) {
+    .products-container{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media screen and (min-width:689px) and (max-width:991px) {
+    .products-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

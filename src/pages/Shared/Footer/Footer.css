@@ -1,0 +1,33 @@
+#footer{
+    margin-top: 20px;
+    background-color: whitesmoke;
+    bottom: 0;
+    margin-bottom: 0px;
+}
+#footer h2{
+    color: rgb(19, 18, 18);
+    padding-top: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: larger;
+    font-weight: bolder;
+}
+#footer p{
+    color: rgb(17, 17, 17);
+    padding-top:10px ;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: lighter;
+}
+#footer input{
+    margin-right: 10px;
+    width: 400px;
+    height: 40px;
+    border: 2px solid rgba(10, 10, 10, 0.164);
+    border-radius: 10px;
+}
+#footer button{
+    text-decoration: none;
+    padding: 5px 10px 5px 10px;
+    background-color: rgb(231, 161, 161);
+    border: 2px solid rgb(17, 17, 17);
+    border-radius: 10px;
+}

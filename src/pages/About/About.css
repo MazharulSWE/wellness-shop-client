@@ -1,0 +1,40 @@
+.About h1{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(113, 166, 235);
+    margin-top: 10px;
+  }
+  .About h3{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(108, 220, 248);
+  }
+  
+  .about img{
+      height: 400px;
+      width: 500px;
+      margin-left: 30px;
+      border-radius: 20px;
+  }
+  .about p{
+      margin:80px 5px 50px 5px;
+      font-family: Georgia, 'Times New Roman', Times, serif;
+      font-weight: bolder;
+      word-spacing: 5px;
+      font-size: large;
+      color: rgb(41, 38, 38);
+  }
+  
+  
+  
+  
+  /* * Responsive style  */ 
+  
+  @media only screen and (max-width:688px) {
+      .about{
+          display: block;
+      }
+      .about img{
+          height: fit-content;
+          width: fit-content;
+      }
+  }
+  

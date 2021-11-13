@@ -1,0 +1,14 @@
+.image-style{
+    width: 320px;
+    height: 90px;
+}
+.style-nav{
+    /* margin: 1px; */
+    /* padding: 5px 10px 5px 10px; */
+}
+
+.style-nav:hover{
+    color: orange;
+    text-decoration:underline;
+
+}

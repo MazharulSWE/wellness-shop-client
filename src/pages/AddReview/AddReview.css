@@ -1,0 +1,26 @@
+.add-review{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQVxM0z-c2Yvfw0vU1Fnod1McjD_LUxF69SKETvHGAojsQrK-Rk0QStIZPPqQwaC-sBgs&usqp=CAU');
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.add-review h1{
+    padding-top: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(247, 80, 14);
+}
+
+
+
+.add-review form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+.add-review input, textarea{
+    width: 40%;
+    margin-bottom: 10px;
+}
