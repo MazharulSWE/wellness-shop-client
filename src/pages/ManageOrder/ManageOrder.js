@@ -4,7 +4,7 @@ import './ManageOrder.css';
 const ManageOrder = () => {
         const [manageOrder, setManageOrder] = useState([]);
         useEffect(()=>{
-            fetch('http://localhost:5000/order')
+            fetch('https://morning-eyrie-93003.herokuapp.com/order')
             .then(res=>res.json())
             .then(data=>setManageOrder(data))
         
@@ -15,7 +15,7 @@ const ManageOrder = () => {
         const removeThisOrder = (e) =>{
             const confirm = window.confirm("Wanna Delete this Order?")
             if (confirm) {
-                fetch(`http://localhost:5000/order/${e}`,{
+                fetch(`https://morning-eyrie-93003.herokuapp.com/order/${e}`,{
                     method: "delete"
                 })
                 .then(res=>res.json())

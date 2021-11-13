@@ -7,7 +7,7 @@ const MyOrder = () => {
     const {user} = useAuth();
     const email = user.email;
     useEffect(()=>{
-        fetch('http://localhost:5000/order')
+        fetch('https://morning-eyrie-93003.herokuapp.com/order')
         .then((res) => res.json())
         .then((data) => setMyOrder(data));
     },[]);
@@ -18,7 +18,7 @@ const MyOrder = () => {
     const ownOrderRemove = (event)=>{
         const confirmation = window.confirm("Are you sure delete this order")
         if (confirmation) {
-            fetch(`http://localhost:5000/order/${event}`,{
+            fetch(`https://morning-eyrie-93003.herokuapp.com/order/${event}`,{
                 method: "delete"
             })
             .then(res =>res.json())

@@ -43,7 +43,7 @@ const Booking = () => {
   
 
    useEffect(()=>{
-       fetch('http://localhost:5000/products')
+       fetch('https://morning-eyrie-93003.herokuapp.com/products')
        .then(res=> res.json())
        .then(data =>setDetails(data))
    },[]);
