@@ -1,6 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import Review from '../Review/Review';
 import './Reviews.css';
 
@@ -23,7 +21,6 @@ const Reviews = () => {
                    ></Review> )
                }
             </div>
-           <Link to="/addReview"> <Button className="mt-5" variant="secondary">Add Your Feedback</Button></Link>
         </div>
     );
 };

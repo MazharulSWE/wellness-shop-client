@@ -1,11 +1,10 @@
 import React from 'react';
-import { useHistory, useParams } from 'react-router';
+import { useHistory} from 'react-router';
 import './Explore.css';
 
 const Explore = ({explore}) => {
     const {_id,img,name,price,description} = explore;
-    const {id}=useParams();
-    
+    // const {id}=useParams();
     const history = useHistory(); 
 
     const purchase = ()=>{

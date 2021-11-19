@@ -39,7 +39,7 @@ function App() {
           <PrivateRoute path="/dashboard">
             <DashBoard></DashBoard>
           </PrivateRoute>
-          <Route path="/AboutUs">
+          <Route path="/about">
             <About></About>
           </Route>
           <Route path="/contact">

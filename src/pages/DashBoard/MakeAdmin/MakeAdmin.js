@@ -25,7 +25,7 @@ const MakeAdmin = () => {
   };
   return (
     <div style={{paddingTop:"30px"}}>
-      <h3>you can make a new admin</h3>
+      <h3>Make a new admin</h3>
       <form onSubmit={createAdmin} action="">
         <input style={{margin:"10px"}} onBlur={emailArea} type="email" placeholder="enter email" />
         <br />

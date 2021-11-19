@@ -11,8 +11,10 @@
    
 }
 .only-My-Order{
-    background-image: url(https://i.ibb.co/b5SZtns/bg-1-1-1.png);
+    background-image: url(https://da4dkroembtou.cloudfront.net/wp-content/uploads/2020/09/02_Maserati_MC20.jpg);
     padding-bottom: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .my-order-header{
