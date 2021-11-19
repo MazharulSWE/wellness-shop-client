@@ -4,7 +4,7 @@ const DashboardDefault = () => {
     return (
         <div className="dashboardMain">
            
-            <h1 className="dashboardDefault-header">Buy a customize bike and explore the World</h1>
+            <h1 className="dashboardDefault-header">Visit Our showroom to Buy a super cool Car.</h1>
         </div>
     );
 };

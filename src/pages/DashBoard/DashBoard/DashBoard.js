@@ -1,5 +1,5 @@
 import React from "react";
-import "./Dashboard.css";
+import "./DashBoard.css";
 import {
   BrowserRouter as Router,
   Switch,
@@ -7,15 +7,15 @@ import {
   Link,
   useRouteMatch,
 } from "react-router-dom";
-import MyOrders from "../MyOrders/MyOrders";
-import PaymentNow from "../PaymentNow/PaymentNow";
+import MyOrders from "../MyOrders/MyOrder";
+import PaymentNow from "../PaymentNow/Payment";
 import Review from "../Review/Review";
 import DashboardDefault from "../DashboardDefault/DashboardDefault";
-import ManageAllOrders from "../ManageAllOrders/ManageAllOrders";
+import ManageAllOrders from "../ManageAllOrders/ManageAllOrder";
 import AddProduct from "../AddProduct/AddProduct";
 import MakeAdmin from "../MakeAdmin/MakeAdmin";
 import ManageProducts from "../ManageProducts/ManageProducts";
-import { useAuth } from "../../../hooks/useAuth";
+import  useAuth  from "../../../hooks/useAuth";
 import PrivateAdmin from "../../../private/PrivateAdmin/PrivateAdmin";
 import PrivateUser from "../../../private/PrivateUser/PrivateUser";
 

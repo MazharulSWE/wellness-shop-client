@@ -1,4 +1,4 @@
-.reviewBtn{
+/* .reviewBtn{
     margin: 10px;
     padding: 0 10px;
     border-radius: 10px;
@@ -11,6 +11,33 @@
   }
   .review{
       padding-top: 150px;
-      background-image: url(https://i.ibb.co/WgbrB8R/rrzStunt.png);
+      background-image: url(https://cardealerseowebsites.com/uploads/styles/parallax_background_lander-min.png);
       padding-bottom: 250px;
-  }
+  } */
+
+  .add-review{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQVxM0z-c2Yvfw0vU1Fnod1McjD_LUxF69SKETvHGAojsQrK-Rk0QStIZPPqQwaC-sBgs&usqp=CAU');
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.add-review h1{
+    padding-top: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: rgb(247, 80, 14);
+}
+
+
+
+.add-review form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 200px;
+}
+
+.add-review input, textarea{
+    width: 50%;
+    margin-bottom: 10px;
+}

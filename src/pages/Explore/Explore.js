@@ -5,6 +5,7 @@ import './Explore.css';
 const Explore = ({explore}) => {
     const {_id,img,name,price,description} = explore;
     const {id}=useParams();
+    
     const history = useHistory(); 
 
     const purchase = ()=>{

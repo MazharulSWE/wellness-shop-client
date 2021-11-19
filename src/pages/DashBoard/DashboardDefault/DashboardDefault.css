@@ -1,7 +1,9 @@
 .dashboardMain{
-    background-image: url(https://i.ibb.co/sF4g8t7/dashboard.jpg);
+    background-image: url(https://www.remaxdoors.com/hubfs/2015_images/Blogging/new_car_showroom.jpg);
     padding-bottom: 550px;
     padding-top: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .dashboardDefault-header{
     color: honeydew;

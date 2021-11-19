@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import Swal from "sweetalert2";
-import { useAuth } from "../../../hooks/useAuth";
+import  useAuth  from "../../../hooks/useAuth";
 import "./ManageAllOrder.css";
 
 const ManageAllOrders = () => {

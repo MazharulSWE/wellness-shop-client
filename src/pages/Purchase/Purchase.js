@@ -55,7 +55,7 @@ const Purchase = () => {
           <div className="prodDetail">
             <img src={img} alt=""></img>
             <h3>{_id}</h3>
-           
+             <h2>{name}</h2>
             <h5>
               <b>Price: $ {price}</b>
             </h5>
@@ -99,7 +99,7 @@ const Purchase = () => {
             />
             <br />
 
-            <input className="bg-warning" type="submit" value="Order" />
+            <input className="bg-primary" type="submit" value="Order" />
           </form>
         </div>
       </div>

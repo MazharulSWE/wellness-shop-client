@@ -7,7 +7,7 @@ import Register from './pages/Login/Register/Register';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './pages/Shared/Header/Header';
 import AuthProvider from './context/AuthProvider/AuthProvider';
-// import DashBoard from "./pages/DashBoard/DashBoard/DashBoard";
+import DashBoard from "./pages/DashBoard/DashBoard/DashBoard";
 import About from './pages/About/About';
 import Contact from './pages/Contact/Contact';
 import Explore from "./pages/Explore/Explore";
@@ -36,9 +36,9 @@ function App() {
           <Route path="/register">
             <Register></Register>
           </Route>
-          {/* <PrivateRoute path="/dashboard">
+          <PrivateRoute path="/dashboard">
             <DashBoard></DashBoard>
-          </PrivateRoute> */}
+          </PrivateRoute>
           <Route path="/AboutUs">
             <About></About>
           </Route>
