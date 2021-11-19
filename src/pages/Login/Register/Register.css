@@ -1,4 +1,27 @@
+.register-input input{
+    margin:10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
 
+.register-input{
+   margin-top: 40px;}
+
+   .register-submit{
+       background-color: rgb(37, 143, 161);
+   }
+
+   .regLink{
+       text-decoration: none;
+       color: tomato;
+   }
+
+
+
+
+
+
+/* 
 .login-page form{
     width: 350px;
     margin-left: 38%;
@@ -11,4 +34,4 @@
 }
 .login-page h1{
     font-family: Georgia, 'Times New Roman', Times, serif;
-}
+} */

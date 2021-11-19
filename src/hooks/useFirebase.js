@@ -4,6 +4,10 @@ import { getAuth, createUserWithEmailAndPassword,onAuthStateChanged,signInWithEm
 
 //initialize firebase
 initializeFirebase();
+// auth for all the function
+const auth = getAuth();
+// google provider
+const googleProvider = new GoogleAuthProvider();
 
 
 const useFirebase = () =>{
@@ -11,99 +15,142 @@ const useFirebase = () =>{
   // Loading spinner
   const [isLoading, setIsLoading] = useState(true);
   // error
-  const [authError,setAuthError] = useState('');
+  // const [authError,setAuthError] = useState(''); // O
+  const [error,setError] = useState(""); //N
+  const [admin,setAdmin]=useState(false); //N
 
 
-  // auth for all the function
-  const auth = getAuth();
-// google provider
-const googleProvider = new GoogleAuthProvider();
+
+  // Google sign in method
+  const signInWithGoogle = (history,location) =>{
+    // setIsLoading(true); //o
+    signInWithPopup(auth,googleProvider)
+  .then((result) => {
+    setUser(result.user); // N
+    const user = result.user
+    saveUser(user.email, user.displayName, "put")
+    setError('');
+    history.push(location?.state?.from || "/dashboard")
+  })
+  .catch((error) => {
+    setError(error.message);
+  })
+  // .finally(()=>setIsLoading(false));  //o
+  };
+
+
+  // state change in browser but login will be stable
+  useEffect(()=>{
+    onAuthStateChanged(auth, (user) => {
+      setIsLoading(true);
+        if (user) {
+          setUser(user);
+          setError("");
+        } else {
+          setUser({})
+        }
+        setIsLoading(false)
+      });
+ },[])
+
+
 
   // register user
   const registerUser = (email,password,name,history)=>{
       setIsLoading(true);
       createUserWithEmailAndPassword(auth,email,password)
-      .then((userCredential) => {
-          setAuthError('')
-          const newUser = {email, displayName: name};
-          setUser(newUser);
-          // send name to firebase after creation
+      .then((result) => {
+          setError("");
+          // console.log(result.user);
+          // save to use in database
+          saveUser(email,name, "post")
+
+          
           updateProfile(auth.currentUser,{
             displayName: name
-          }).then(()=>{
+          }).then((result)=>{
+            setUser(result.user)
           }).catch((error)=>{
           });
-          history.replace('/');
+          history.push("/");
       })
       .catch((error) => {
-        setAuthError(error.message);
+        setError(error.message);
       })
-      .finally(()=>setIsLoading(false));
-  }
+      .finally(()=>{
+      setIsLoading(false)
+      });
+  };
 
   // sign in with email and pass 
-  const loginUser = (email,password,location,history)=>{
-      setIsLoading(true)
+  const loginUser = (email,password,history,location)=>{
+     const uri = location?.state?.from
+      // setIsLoading(true)
     signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
-        const destination = location?.state?.from || '/';
-        history.replace(destination);
-        setAuthError('');
+        const user = userCredential.user;
+        setError("");
+        history.push(uri||"/dashboard")
     })
     .catch((error) => {
-        setAuthError(error.message);
+        setError(error.message);
     })
-    .finally(()=>setIsLoading(false));
-  }
+    // .finally(()=>setIsLoading(false));
+  };
 
 
-  // Google sign in method
-  const signInWithGoogle = (location,history) =>{
-    setIsLoading(true);
-    signInWithPopup(auth,googleProvider)
-  .then((result) => {
-    const user = result.user;
-    setAuthError('');
-  }).catch((error) => {
-    setAuthError(error.message);
-  }).finally(()=>setIsLoading(false));;
-  }
+  
 
-
-
-
-  // state change in browser but login will be stable
-     useEffect(()=>{
-        const unsubscribe = onAuthStateChanged(auth, (user) => {
-            if (user) {
-              setUser(user)
-            } else {
-              setUser({})
-            }
-            setIsLoading(false)
-          });
-          return () => unsubscribe
-     },[])
 
   // sign out
   const logout = () =>{
-      setIsLoading(true)
-    signOut(auth).then(() => {
-        // Sign-out successful.
-      }).catch((error) => {
-        // An error happened.
+    const auth = getAuth();
+      // setIsLoading(true)
+    signOut(auth)
+    .then(() => {
+        setUser({});
       })
-      .finally(()=>setIsLoading(false));
+      .catch((error) => {
+        // An error happened.
+      });
+      // .finally(()=>setIsLoading(false));
+  };
+
+
+  //check admin
+useEffect(()=>{
+  // setIsLoading(true)
+  fetch(`https://mighty-caverns-68467.herokuapp.com/users/${user.email}`)
+  .then(res=>res.json())
+  .then(data=>{
+    setAdmin(data.admin)
+    // setIsLoading(false) 
+})
+
+},[user.email])
+
+  const saveUser=(email,displayName,method)=>{
+
+    const user ={email,displayName}
+    fetch("https://mighty-caverns-68467.herokuapp.com/users",
+    {method:method,
+  headers:{"content-type":"application/json"},
+  body: JSON.stringify(user)
+  })
+  .then(res=>res.json())
+  .then(data=>console.log(data))
+
   }
 
   return{
+      admin,
       user,
       isLoading,
-      authError,
+      error,
       signInWithGoogle,
       registerUser,
       loginUser,
       logout,
-  }
-}
+  };
+};
 export default useFirebase;

@@ -1,10 +1,9 @@
-// import { Axios } from 'axios';
 import axios from 'axios'
 import React from 'react';
 import { useForm } from 'react-hook-form';
-import './AddCar.css';
+import './AddProduct.css';
 
-const AddCar = () => {
+const AddProduct = () => {
     const { register, handleSubmit, reset } = useForm();
     const onSubmit = data => {
         console.log(data);
@@ -32,4 +31,4 @@ const AddCar = () => {
 );
 };
 
-export default AddCar;
+export default AddProduct;

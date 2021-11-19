@@ -1,14 +1,21 @@
-.image-style{
-    width: 320px;
-    height: 90px;
+.header-link{
+    color: black;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+    padding: 0 10px 0 10px;
 }
-.style-nav{
-    /* margin: 1px; */
-    /* padding: 5px 10px 5px 10px; */
+.header-link :hover{
+    color: orangered;
+    
 }
 
-.style-nav:hover{
-    color: orange;
-    text-decoration:underline;
-
+.header-info{
+    text-decoration: none;
+    color: black;
 }
+.header-img{
+    width: 40px;
+    border-radius: 25px;
+}
+
+body{background-color:rgb(238, 231, 223);}
